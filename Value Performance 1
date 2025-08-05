@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class NumberFormatter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        int intNumber = scanner.nextInt();
+
+        
+        float floatNumber = scanner.nextFloat();
+
+        
+        System.out.println(intNumber);
+        System.out.printf("%.2f", floatNumber);
+    }
+}
