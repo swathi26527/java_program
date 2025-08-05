@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class MathFunctions {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        float floatVal = scanner.nextFloat();      
+        int squareInput = scanner.nextInt();       
+        int base = scanner.nextInt();              
+        int power = scanner.nextInt();             
+
+        
+        int floorVal = (int) Math.floor(floatVal); 
+        int ceilVal = (int) Math.ceil(floatVal);   
+        int sqrtVal = (int) Math.sqrt(squareInput); 
+        int powVal = (int) Math.pow(base, power);   
+
+        
+        System.out.println(floorVal);
+        System.out.println(ceilVal);
+        System.out.println(sqrtVal);
+        System.out.println(powVal);
+    }
+}
