@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] array = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            array[i] = sc.nextInt();
+        }
+
+        int k = sc.nextInt();
+
+        Arrays.sort(array);
+
+        System.out.print("The elements are in the order: ");
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+
+        System.out.print("The Kth value is " + k + " and Largest elements are ");
+        for (int i = n - 1; i >= n - k; i--) {
+            System.out.print(array[i] + " ");
+        }
+    }
+}
