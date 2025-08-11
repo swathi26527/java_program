@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        int starCount = 0;
+        int hashCount = 0;
+
+        for (char c : input.toCharArray()) {
+            if (c == '*') {
+                starCount++;
+            } else if (c == '#') {
+                hashCount++;
+            }
+        }
+
+        int diff = Math.abs(starCount - hashCount);
+
+        if (diff == 0) {
+            System.out.println("0");
+        } else if (diff == 1) {
+            System.out.println("The Difference of the character in the given string: 001");
+        } else {
+            System.out.printf("The Difference of the character in the given string: %02d\n", diff);
+        }
+    }
+}
