@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+    public static void printNaturalNumbers(int n) {
+        if (n == 0) {
+            return;
+        }
+        printNaturalNumbers(n - 1);
+        System.out.print(n + " ");
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if (num >= 1 && num <= 50) {
+            System.out.println("The first " + num + " Natural Numbers are:");
+            printNaturalNumbers(num);
+        } else {
+            System.out.println("Enter a Valid Input!!!!!!!!!!!!!!!!!!!!!!!!");
+        }
+    }
+}
