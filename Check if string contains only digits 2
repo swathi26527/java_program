@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class DigitOnlyCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        boolean onlyDigits = true;
+        for (char c : input.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                onlyDigits = false;
+                break;
+            }
+        }
+       if (onlyDigits) {
+            System.out.println("only digits");
+        } else {
+            System.out.println("no");
+        }
+    }
+}
