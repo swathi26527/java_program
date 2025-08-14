@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class CharacterTypeCount {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        int vowels = 0, consonants = 0, digits = 0, special = 0;
+        input = input.toLowerCase();
+            for (char c : input.toCharArray()) {
+            if (Character.isLetter(c)) {
+                if ("aeiou".indexOf(c) != -1) {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            } else if (Character.isDigit(c)) {
+                digits++;
+            } else {
+                special++;
+            }
+        }
+        System.out.println("vowels:" + vowels);
+        System.out.println("consonants:" + consonants);
+        System.out.println("digits:" + digits);
+        System.out.println("special characters:" + special);
+    }
+}
