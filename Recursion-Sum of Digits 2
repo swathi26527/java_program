@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main {
+    public static int sumOfDigits(int num) {
+        if (num == 0)
+            return 0;
+        return (num % 10) + sumOfDigits(num / 10);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int input = sc.nextInt();
+        if (input < 1000) {
+            int sum = sumOfDigits(input);
+            System.out.printf("Sum of Digit:%04d\n", sum);
+        } else {
+            System.out.println("Enter a Valid Input!!!!!!!");
+        }
+    }
+}
